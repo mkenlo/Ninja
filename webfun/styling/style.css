@@ -1,0 +1,25 @@
+body{
+    padding: 20px;
+    font-family: "Catamaran", sans-serif;;
+}
+h1,h2,h3,h4,h5,h6{
+    padding:10px;
+}
+
+h1{
+    color: white;
+    background-color: black;
+}
+h1 span{
+    color:aqua;
+ }
+h2{
+    color: white;
+    background-color: purple;
+    text-align: center;
+}
+h3{
+    text-align: right;
+    text-decoration: underline;
+    background-color: cadetblue;
+}
