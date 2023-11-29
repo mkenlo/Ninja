@@ -1,0 +1,15 @@
+body{
+    margin:0;
+}
+.row{
+    display: flex;
+}
+.col{
+    flex: 1;
+    margin-right: 10px;
+    background-color: #ED89D9;
+    padding: 20px;
+}
+.col:last-child{
+    margin-right: 0;
+}
