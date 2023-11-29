@@ -1,0 +1,32 @@
+body {
+    padding: 20px;
+    font-family: "Catamaran", sans-serif;    
+}
+p{
+    width: 50px;
+    padding: 10px;
+}
+button{
+    color: white;
+    background-color: white;
+    padding: 10px;
+}
+.btn-search{
+    border: 2px solid #17868F;
+    border-radius: 103px;
+    width: 150px;
+    font-weight: 800;    
+    color:#17868F;
+}
+.btn-plus{
+    background-color: #2097A0;
+    border: none;
+    border-radius: 50px;
+    box-shadow: none;
+    padding: 5px 10px;
+}
+.btn-submit{
+    background-color: #1760C9;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+}
