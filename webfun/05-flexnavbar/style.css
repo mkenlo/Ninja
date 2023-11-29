@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    font-family: "Catamaran", sans-serif;
+}
+.nav{
+    background-color: #2F393E;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.nav-links{
+    display:flex;
+}
+.nav-links li{
+    list-style: none;
+    padding: 20px 10px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+.active{
+    font-weight: 800;
+}
+.btn{
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    background-color: #3377E4;
+    color: white;
+    font-family: "Catamaran", sans-serif;
+}
