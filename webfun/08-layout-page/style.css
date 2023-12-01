@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: "Catamaran", sans-serif;
+}
+
+footer {
+    text-align: center;
+}
+
+.row{
+    display: flex;
+}
+
+.col {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+.col, .col-2{
+    margin-right: 20px;
+}
+
+.col-2:last-child,
+.col:last-child {
+    margin-right: 0;
+}
+
+.block {
+    border: 3px solid #a3abb3;
+    margin-top: 50px;
+}
+
+.navbar {
+    background-color: #2F393E;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+    padding: 20px 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    font-weight: 800;
+}
+
+.btn {
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    background-color: #289ac7;
+    color: white;
+    font-family: "Catamaran", sans-serif;
+    margin: 20px 10px;
+    height: 40px;
+    padding: 3px;
+}
+
+.user-card-header {
+    background-color: #289ac7;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.user-card-header .profile {
+    position: relative;
+    top: 60px;
+    left: 20px;
+}
+
+.about {
+    padding: 20px;
+}
+
+.container {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.section-header {
+    background-color: #2F393E;
+    color: white;
+    padding: 20px 0 20px 20px;
+    display: flex;
+}
+
+.schools {
+    padding: 20px;
+}
+.schools > p{
+    margin: 0;
+}
+.school-name {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.school-dates {
+    font-size: 1.2em;
+    color: #aca5a5;
+}
+
+.pills {
+    background-color: rgb(215, 219, 223);
+    color: #2F393E;
+    border: 1px solid #2F393E;
+    border-radius: 100%;
+    padding: 0 10px;
+    text-align: center;
+    width: 30px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.list-item {
+    padding: 20px;
+}
+
+.item {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+}
+
+.item p {
+    flex-grow: 2;
+    padding: 10px;
+}
+
+.round-img {
+    border: 2px solid #a3abb3;
+    border-radius: 200%;
+    padding: 3px;
+    background-color: white;
+}
+
+.mid-size {
+    width: 100px;
+    height: 100px;
+}
+
+.small-size {
+    width: 50px;
+    height: 50px;
+}
+
+.icons {
+    width: 24px;
+    height: 24px;
+    padding: 0 5px;
+}
