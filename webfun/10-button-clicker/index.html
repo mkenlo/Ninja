@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dojonary</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar container">
+        <h1>Dojonary</h1>
+        <input class="form-input" type="text" name="search_text" placeholder="Search">
+        <button class="btn btn-primary" onclick="doLogin(this)">Login</button>
+    </header>
+    <div class="container row">
+        <main class="col-3">
+            <div class="card">
+                <h2>ninja</h2>
+                <div class="word row">
+                    <div class="col">
+                        <p class="word-type text-italic"> noun </p>
+                        <p class="word-plural">Plural: <span class="text-italic">ninjas</span></p>
+                    </div>
+                    <div class="col-4">
+                        <p class="word-definition"> A practitioner skilled in the <a href="#">Japanese</a> art of <a
+                                href="#">ninjustu</a></p>
+                    </div>
+                </div>
+                <button class="btn btn-warning" onclick="addLikes(this);">13 Likes</button>
+            </div>
+            <div class="card">
+                <h2>ninja</h2>
+                <div class="word row">
+                    <div class="col">
+                        <p class="word-type text-italic"> noun </p>
+                        <p class="word-plural">Plural: <span class="text-italic">ninjas</span> </p>
+                    </div>
+                    <div class="col-4">
+                        <p class="word-definition">A <a href="#">programmer</a> who breaks down problems with zen-like
+                            focus
+                        </p>
+                    </div>
+
+                </div>
+                <button class="btn btn-warning" onclick="addLikes(this);">37 Likes</button>
+            </div>
+        </main>
+        <aside>
+            <div class=" card">
+                <h2>Dojonary is defined by you</h2>
+                <button class="btn btn-success" onclick="hide(this)">Add Definition</button>
+            </div>
+
+        </aside>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

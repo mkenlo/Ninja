@@ -1,0 +1,100 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Itim', cursive;
+}
+
+header {
+    background-color: #e7e7e7;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    padding: 10px 5px 10px 0;
+}
+
+h2 {
+    padding-bottom: 5px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 2px solid rgb(163, 153, 153);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+
+    padding: 10px;
+    border-radius: 3px;
+    border: 2px solid #575151;
+    box-shadow: 3px 3px 3px #575151;
+    font-family: 'Itim', cursive;
+}
+
+.btn-primary {
+    background-color: #286eca;
+    color: white;
+}
+
+.btn-success {
+    background-color: #05a61d;
+}
+
+.btn-warning {
+    background-color: #e0c31d;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: baseline;
+}
+
+.col {
+    flex: 1;
+}
+
+.col-3 {
+    flex: 3;
+}
+
+.col-4 {
+    flex: 4;
+}
+
+.col-6 {
+    flex: 6;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-input {
+    padding: 10px;
+    width: 25%;
+
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.word-type {
+    padding-left: 20px;
+}
