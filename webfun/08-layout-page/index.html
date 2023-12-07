@@ -31,7 +31,7 @@
                     <img class="profile round-img mid-size" src="images/gracehoppertocat.jpg" alt="user icon">
                 </div>
                 <div class="about">
-                    <h1>Jane Doe</h1>
+                    <h1 id="profile-name">Jane Doe</h1>
 
                     <div class="item">
                         <img src="icons/map-marker.png" alt="map icon" class="icons">
@@ -43,7 +43,7 @@
 
                     <div class="item">
                         <img src="icons/gear.png" alt="gear icon" class="icons">
-                        <a href="#">Edit my Profile</a>
+                        <a href="#" onclick="editProfile('profile-name')">Edit my Profile</a>
                     </div>
 
                 </div>
@@ -65,25 +65,28 @@
                     <h2><span class="pills">2</span>Connection Requests </h2>
                 </div>
                 <div class="list-item">
-                    <div class="item">
+                    <div class="item" id="connection-request-1">
                         <img src="images/todd-s.jpg" alt="user image" class="round-img small-size">
                         <p>Todd E</p>
-                        <img src="icons/accept-circle.png" alt="accept-circle icon" class="icons">
-                        <img src="icons/close-circle.png" alt="close-circle icon" class="icons">
+                        <img src="icons/accept-circle.png" alt="accept-circle icon" class="icons"
+                            onclick="addConnection('connection-request-1')">
+                        <img src="icons/close-circle.png" alt="close-circle icon" class="icons"
+                            onclick="removeConnectionRequest('connection-request-1')">
                     </div>
-                    <div class="item">
+                    <div class="item" id="connection-request-2">
                         <img src="images/phil-s.jpg" alt="user image" class="round-img small-size">
                         <p>Phil S</p>
-                        <img src="icons/accept-circle.png" alt="accept-circle icon" class="icons">
-                        <img src="icons/close-circle.png" alt="close-circle icon" class="icons">
+                        <img src="icons/accept-circle.png" alt="accept-circle icon" class="icons"
+                            onclick="addConnection('connection-request-2')">
+                        <img src="icons/close-circle.png" alt="close-circle icon" class="icons"
+                            onclick="removeConnectionRequest('connection-request-2')">
                     </div>
 
                 </div>
             </section>
             <section id="your-connections" class="block">
                 <div class="section-header">
-
-                    <h2><span class="pills">500+</span>Your Connections </h2>
+                    <h2><span class="pills">308</span>Your Connections </h2>
                 </div>
                 <div class="list-item">
                     <div class="item">
@@ -112,6 +115,7 @@
         <p>Images from <a href="https://octodex.github.com/">Github Octodex</a></p>
     </footer>
 
+    <script src="script.js"></script>
 
 </body>
 
