@@ -9,10 +9,25 @@ body {
     font-family: 'Itim', cursive;
 }
 
-.container {
+header{
+    padding: 20px;
+    background-color: #3a3434;
+    color: white;
+}
+
+aside{
+    max-height: 350px;
+    text-align: center;
+}
+.container{
     min-width: 650px;
     max-width: 1050px;
     margin: 0 auto;
+}
+
+.main-container{
+    display: flex;
+    gap: 20px;
 }
 
 .post {
@@ -49,4 +64,10 @@ body {
 
 .likes-count{
     margin-right: 20px;
+}
+
+.heading{
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 20px ;
 }
