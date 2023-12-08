@@ -1,0 +1,92 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Itim', cursive;
+}
+
+header {
+    padding: 5px;
+    background-color: #aecbf2;
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: baseline;
+}
+
+ul.row li {
+    list-style: none;
+    font-size: 1.5em;
+}
+
+ul.row li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.col {
+    flex: 1;
+}
+
+.card {
+    margin-top: 20px;
+    background-color: #edeff2;
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sub-header {
+    padding: 20px;
+    border-bottom: 2px solid black;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #6d6a6a;
+    box-shadow: 3px 3px #6d6a6a;
+    font-family: 'Itim', cursive;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #4751e7;
+}
+
+.alert-cookie-info {
+    padding: 20px;
+    border: 2px solid #202020;
+    margin-top: 20px;
+    position: fixed;
+}
+
+.day-temperature {
+    padding: 20px;
+}
+
+.high-temp {
+    color: #bb114a;
+}
+
+.low-temp {
+    color: rgb(19, 74, 129);
+}

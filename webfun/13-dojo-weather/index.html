@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DojoWeather</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <h1 class="col">DojoWeather</h1>
+                <ul class="row">
+                    <li><a href="#" onclick="alertWeatherInfo(this);">Burbank</a></li>
+                    <li><a href="#" onclick="alertWeatherInfo(this);">Chicago</a></li>
+                    <li><a href="#" onclick="alertWeatherInfo(this);">Dallas</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <section class="row sub-header">
+            <h2 class="city-name col">San Jose</h2>
+            <div>
+                <label for="temperature-measure">show temperature in </label>
+                <select id="temperature-measure" name="temperature-measure" onchange="convertTemp(this.value)">
+                    <option value="celsius">&ordm;C</option>
+                    <option value="fahrenheit">&ordm;F</option>
+                </select>
+            </div>
+        </section>
+        <section class="row">
+            <div class="card">
+                <h2>Today</h2>
+                <img src="./assets/some_rain.png" class="icons" alt="rain icon">
+                <p>some rain</p>
+                <div class="day-temperature row">
+                    <p class="high-temp"><span>24</span>&ordm;</p>
+                    <p class="low-temp"><span>18</span>&ordm;</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Tomorrow</h2>
+                <img src="./assets/some_sun.png" class="icons" alt="sun icon">
+                <p>some sun</p>
+                <div class="day-temperature row">
+                    <p class="high-temp"><span>27</span>&ordm;</p>
+                    <p class="low-temp"><span>19</span>&ordm;</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Friday</h2>
+                <img src="./assets/some_clouds.png" class="icons" alt="cloud icon">
+                <p>some clouds</p>
+                <div class="day-temperature row">
+                    <p class="high-temp"><span>21</span>&ordm;</p>
+                    <p class="low-temp"><span>16</span>&ordm;</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Saturday</h2>
+                <img src="./assets/some_sun.png" class="icons" alt="sun icon">
+                <p>some sun</p>
+                <div class="row">
+                    <p class="high-temp"><span>26</span>&ordm;</p>
+                    <p class="low-temp"><span>21</span>&ordm;</p>
+                </div>
+            </div>
+        </section>
+        <section class="alert-cookie-info row">
+            <img src="./assets/cookie.png" alt="cookie icon">
+            <div class="col">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media
+                    features and to analyse our traffic</p>
+            </div>
+            <button class="btn btn-primary" onclick="dismissAlert('.alert-cookie-info')">I accept</button>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
