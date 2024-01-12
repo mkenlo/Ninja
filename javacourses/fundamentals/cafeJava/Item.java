@@ -1,27 +1,27 @@
 public class Item {
-    String name;
-    double price;
-    int quantity;
+    private String name;
+    private double price;
 
     public Item(String name, double price) {
         this.name = name;
         this.price = price;
-        this.quantity = 0;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setPrice(double price) {
+        this.price = price;
     }
     public double getPrice() {
         return price;
     }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void updateQuantity(int quantity){
-        this.quantity += quantity;
-    }
-
-    @Override
+     @Override
     public String toString() {
-        return "(" + "name='" + name + ", price=" + price + ", quantity="+quantity+ ')';
+        return "(" + "name='" + name + ", price=" + price + ")";
     }
 }

@@ -1,15 +1,24 @@
+import java.text.NumberFormat;
 import java.util.HashMap;
 
 public class Order {
-    String customerName;
-    double total;
-    boolean isReady;
-    HashMap<String,Item> items;
+    private String customerName;
+    private double total;
+    private boolean isReady;
+    private HashMap<Item, Integer> items;
 
     public Order() {
         this.items = new HashMap<>();
         this.isReady = false;
         this.total = 0;
+        this.customerName = "Unnamed";
+    }
+
+    public Order(String customerName) {
+        this.items = new HashMap<>();
+        this.isReady = false;
+        this.total = 0;
+        this.customerName = customerName;
     }
 
     public String getCustomerName() {
@@ -32,25 +41,60 @@ public class Order {
         isReady = ready;
     }
 
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public HashMap<Item, Integer> getItems() {
+        return items;
+    }
+
+    public void setItems(HashMap<Item, Integer> items) {
+        this.items = items;
+    }
 
     public void addItemToOrder(Item item, int quantity){
-        this.items.putIfAbsent(item.name, item);
-        this.items.get(item.name).updateQuantity(quantity);
-       this.total += item.getPrice()*quantity;
+        int n = this.items.getOrDefault(item, 0);
+       this.items.putIfAbsent(item, n+quantity);
+
+
+        this.total += item.getPrice() * quantity;
+
     }
 
     @Override
     public String toString() {
-        return String.format("{ Customer: %s, \n Items: %s, \n isOrderReady: %s, \n total: %f \n}", customerName, displayItemsList(), isReady, total);
+        NumberFormat currencyFormatter =
+                NumberFormat.getCurrencyInstance();
+        return String.format("Customer: %s, \nItems: %s \nTotal: %s", customerName, displayItemsList(), currencyFormatter.format(getOrderTotal()));
     }
 
     private String displayItemsList(){
-        StringBuilder strBuilder = new StringBuilder("[");
-        for(Item item: items.values()){
-            strBuilder.append(item.toString());
+        NumberFormat currencyFormatter =
+                NumberFormat.getCurrencyInstance();
+        StringBuilder strBuilder = new StringBuilder("\n");
+        for(Item item: items.keySet()){
+            strBuilder.append(item.getName());
+            strBuilder.append(" * ");
+            strBuilder.append(this.items.get(item));
+            strBuilder.append(" = ");
+            strBuilder.append(currencyFormatter.format(item.getPrice()*this.items.get(item)));
+            strBuilder.append("\n");
         }
-        strBuilder.append("]");
+        strBuilder.deleteCharAt(strBuilder.length() -1);
+
         return strBuilder.toString();
     }
 
+    public String getStatusMessage(){
+        return (isReady) ? "Your order is ready" : "Your order will be ready shortly";
+    }
+
+    public double getOrderTotal(){
+        double sum = 0;
+        for(Item item: items.keySet()) {
+            sum += item.getPrice() * this.items.get(item);
+        }
+        return sum;
+    }
 }
